@@ -15,7 +15,6 @@ export const urls = [
   "https://en.wikipedia.org/wiki/Deep_learning",
   "https://en.wikipedia.org/wiki/Cloud_computing",
   "https://en.wikipedia.org/wiki/Computer_network",
-  "https://en.wikipedia.org/wiki/Cybersecurity",
   "https://en.wikipedia.org/wiki/Web_development",
   "https://en.wikipedia.org/wiki/JavaScript",
   "https://en.wikipedia.org/wiki/Node.js",

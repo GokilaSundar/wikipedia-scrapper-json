@@ -14,14 +14,14 @@ async function getPost(url) {
   const document = parse(html);
 
   const titleElement = document.querySelector("span.mw-page-title-main");
-  const contentElement = document.getElementById("bodyContent");
+  const contentElements = document.querySelectorAll("#mw-content-text p");
 
-  if (!titleElement || !contentElement) {
+  if (!titleElement || !contentElements || !contentElements.length) {
     throw new Error("Failed to parse post");
   }
 
-  const title = titleElement.text;
-  const content = contentElement.text;
+  const title = titleElement.innerText;
+  const content = contentElements.map((element) => element.innerText).join("\n");
 
   return { title, content, url };
 }
